@@ -23,8 +23,14 @@ export default {
 				DesinationMobile:
 					"url('/src/assets/destination/background-destination-mobile.jpg')",
 				CrewDesktop: "url('/src/assets/crew/background-crew-desktop.jpg')",
-				CrewTablet: "url('/src/assets/crew/background-crew-desktop.jpg')",
-				CrewMobile: "url('/src/assets/crew/background-crew-desktop.jpg')",
+				CrewTablet: "url('/src/assets/crew/background-crew-tablet.jpg')",
+				CrewMobile: "url('/src/assets/crew/background-crew-mobile.jpg')",
+				TechnologyDesktop:
+					"url('/src/assets/technology/background-technology-desktop.jpg')",
+				TechnologyTablet:
+					"url('/src/assets/technology/background-technology-tablet.jpg')",
+				TechnologyMobile:
+					"url('/src/assets/technology/background-technology-mobile.jpg')",
 			},
 		},
 	},
