@@ -63,3 +63,8 @@ interface ITechnology {
 	};
 	description: string;
 }
+
+interface IRoute {
+	name: string;
+	path: string;
+}

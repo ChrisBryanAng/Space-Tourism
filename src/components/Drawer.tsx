@@ -2,6 +2,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import Close from '../assets/shared/icon-close.svg';
+import { routes } from '../utils/routes';
+import { Image } from './';
 
 interface IDrawer {
 	isOpen: boolean;
@@ -10,25 +12,6 @@ interface IDrawer {
 
 const Drawer = ({ isOpen, setIsOpen }: IDrawer) => {
 	const location = useLocation();
-
-	const routes = [
-		{
-			name: 'Home',
-			path: '/',
-		},
-		{
-			name: 'Destination',
-			path: '/destination',
-		},
-		{
-			name: 'Crew',
-			path: '/crew',
-		},
-		{
-			name: 'Technology',
-			path: '/technology',
-		},
-	];
 
 	const variants = {
 		open: {
@@ -42,21 +25,17 @@ const Drawer = ({ isOpen, setIsOpen }: IDrawer) => {
 	return (
 		<motion.div
 			variants={variants}
-			initial={{ x: '80%' }}
+			initial='close'
 			animate={isOpen ? 'open' : 'close'}
 			exit='close'
 			transition={{ duration: 0.3 }}
-			className='absolute inset-0 ml-auto z-50 flex flex-col md:hidden p-8 h-screen w-[65%] bg-white/10 backdrop-blur-xl'
+			className='fixed inset-0 ml-auto z-50 flex flex-col md:hidden p-8 h-screen w-[65%] bg-white/10 backdrop-blur-xl'
 		>
-			<img
-				src={Close}
-				alt='close'
-				loading='lazy'
-				className='h-6 w-5 mb-20 self-end'
-				onClick={() => setIsOpen(false)}
-			/>
+			<div className='h-6 w-5 mb-20 self-end'>
+				<Image src={Close} alt='close' onClick={() => setIsOpen(false)} />
+			</div>
 			<div className='flex flex-col text-center h-full gap-6 text-[16px] tracking-[2.7px]'>
-				{routes.map((route, index) => (
+				{routes.map((route: IRoute, index: number) => (
 					<Link
 						key={route.name}
 						to={route.path}
@@ -77,3 +56,6 @@ const Drawer = ({ isOpen, setIsOpen }: IDrawer) => {
 };
 
 export default Drawer;
+function MutableRefObject<T>() {
+	throw new Error('Function not implemented.');
+}
