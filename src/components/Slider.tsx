@@ -1,6 +1,6 @@
 interface ISlider {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	data: any;
+	data: ICrews[];
 	activeCrew: number;
 	handleActiveCrew: (index: number) => void;
 }
@@ -8,7 +8,7 @@ interface ISlider {
 const Slider = ({ data, activeCrew, handleActiveCrew }: ISlider) => {
 	return (
 		<>
-			{Array.from({ length: data.crew.length }).map((_, index: number) => (
+			{Array.from({ length: data.length }).map((_, index: number) => (
 				<div
 					key={index}
 					className={`h-3 w-3 rounded-full cursor-pointer ${
