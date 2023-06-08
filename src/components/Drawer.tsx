@@ -56,6 +56,3 @@ const Drawer = ({ isOpen, setIsOpen }: IDrawer) => {
 };
 
 export default Drawer;
-function MutableRefObject<T>() {
-	throw new Error('Function not implemented.');
-}
