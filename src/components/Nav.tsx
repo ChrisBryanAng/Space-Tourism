@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import Logo from '../assets/shared/logo.svg';
-import Menu from '../assets/shared/icon-hamburger.svg';
+import Logo from '/assets/shared/logo.svg';
+import Menu from '/assets/shared/icon-hamburger.svg';
 import { routes } from '../utils/routes';
 import { Drawer, Image } from './';
 

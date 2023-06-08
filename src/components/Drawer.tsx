@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Close from '../assets/shared/icon-close.svg';
+import Close from '/assets/shared/icon-close.svg';
 import { routes } from '../utils/routes';
 import { Image } from './';
 

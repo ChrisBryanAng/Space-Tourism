@@ -13,24 +13,19 @@ export default {
 				Barlow: ['Barlow Condensed', 'sans-serif'],
 			},
 			backgroundImage: {
-				HomeDesktop: "url('/src/assets/home/background-home-desktop.jpg')",
-				HomeTablet: "url('/src/assets/home/background-home-tablet.jpg')",
-				HomeMobile: "url('/src/assets/home/background-home-mobile.jpg')",
+				HomeDesktop: "url('/assets/home/background-home-desktop.jpg')",
+				HomeTablet: "url('/assets/home/background-home-tablet.jpg')",
+				HomeMobile: "url('/assets/home/background-home-mobile.jpg')",
 				DesinationDesktop:
-					"url('/src/assets/destination/background-destination-desktop.jpg')",
-				DesinationTablet:
-					"url('/src/assets/destination/background-destination-tablet.jpg')",
-				DesinationMobile:
-					"url('/src/assets/destination/background-destination-mobile.jpg')",
-				CrewDesktop: "url('/src/assets/crew/background-crew-desktop.jpg')",
-				CrewTablet: "url('/src/assets/crew/background-crew-tablet.jpg')",
-				CrewMobile: "url('/src/assets/crew/background-crew-mobile.jpg')",
-				TechnologyDesktop:
-					"url('/src/assets/technology/background-technology-desktop.jpg')",
-				TechnologyTablet:
-					"url('/src/assets/technology/background-technology-tablet.jpg')",
-				TechnologyMobile:
-					"url('/src/assets/technology/background-technology-mobile.jpg')",
+					"url('/assets/destination/background-destination-desktop.jpg')",
+				DesinationTablet: "url('/assets/destination/background-destination-tablet.jpg')",
+				DesinationMobile: "url('/assets/destination/background-destination-mobile.jpg')",
+				CrewDesktop: "url('/assets/crew/background-crew-desktop.jpg')",
+				CrewTablet: "url('/assets/crew/background-crew-tablet.jpg')",
+				CrewMobile: "url('/assets/crew/background-crew-mobile.jpg')",
+				TechnologyDesktop: "url('/assets/technology/background-technology-desktop.jpg')",
+				TechnologyTablet: "url('/assets/technology/background-technology-tablet.jpg')",
+				TechnologyMobile: "url('/assets/technology/background-technology-mobile.jpg')",
 			},
 		},
 	},
