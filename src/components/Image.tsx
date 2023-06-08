@@ -12,7 +12,7 @@ const Image = ({ src, alt, onClick }: IImage) => {
 			<img
 				src={src}
 				alt={alt}
-				className='h-full w-full object-contain'
+				className='h-full w-full object-bottom object-contain'
 				loading='lazy'
 				onClick={onClick}
 			/>

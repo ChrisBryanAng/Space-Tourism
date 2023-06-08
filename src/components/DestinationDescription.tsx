@@ -13,7 +13,7 @@ const DestinationDescription = ({ data, activePlanet }: IDestinationDescription)
 				{data[activePlanet].description}
 			</p>
 			<div className='h-[2px] w-[80%] bg-space-secondary/20 my-[32px]' />
-			<div className='flex flex-col md:flex-row xl:space-x-24'>
+			<div className='flex flex-col md:flex-row md:gap-24 xl:gap-0 xl:space-x-24'>
 				<p className='flex flex-col text-center xl:text-start uppercase font-Bellefair text-white text-[28px]'>
 					<span className='text-space-secondary text-[16px] xl:text-[14px] font-Barlow mb-2 tracking-[2.4px]'>
 						Avg. Distance

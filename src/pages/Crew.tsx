@@ -40,7 +40,7 @@ const Crew = () => {
 				</div>
 			</section>
 
-			<section className='hidden md:inline-block xl:self-end md:h-[462px] md:w-[457px] xl:h-[712px] xl:w-[568px] xl:ml-16'>
+			<section className='hidden md:flex xl:self-end md:h-[462px] md:w-[457px] xl:h-[712px] xl:w-[568px] xl:ml-16'>
 				<Image src={data.crew[activeCrew].images.webp} alt={data.crew[activeCrew].name} />
 			</section>
 		</main>
