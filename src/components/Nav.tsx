@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import Logo from '../assets/shared/logo.svg';
 import Menu from '../assets/shared/icon-hamburger.svg';
+import { Drawer } from './';
 
 const Nav = () => {
 	const location = useLocation();
+	const [isOpen, setIsOpen] = useState(false);
 
 	const routes = [
 		{
@@ -26,7 +30,7 @@ const Nav = () => {
 	];
 
 	return (
-		<div className='flex fixed h-24 xl:mt-10 items-center justify-between font-Barlow uppercase text-space-white w-full'>
+		<div className='flex fixed h-24 xl:mt-10 items-center justify-between font-Barlow uppercase text-space-white w-full overflow-visible'>
 			<img
 				src={Logo}
 				alt='Space Logo'
@@ -42,7 +46,7 @@ const Nav = () => {
 						className={`h-full flex items-center  ${
 							location.pathname === route.path
 								? 'border-b-[1px] border-b-white'
-								: 'border-none'
+								: 'hover:border-b-[1px] hover:border-b-white/70'
 						}`}
 					>
 						<span className='hidden xl:inline-block font-bold mr-2'>0{index}</span>
@@ -55,8 +59,13 @@ const Nav = () => {
 				alt='Hamburger'
 				loading='lazy'
 				className='block md:hidden h-6 w-6 mr-7'
+				onClick={() => setIsOpen(true)}
 			/>
 			<div className='hidden xl:inline-block absolute left-64 w-1/3 h-[1px] bg-space-white/20 pointer-events-none' />
+
+			<AnimatePresence mode='wait'>
+				{isOpen && <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />}
+			</AnimatePresence>
 		</div>
 	);
 };

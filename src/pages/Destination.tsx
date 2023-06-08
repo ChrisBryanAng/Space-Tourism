@@ -31,7 +31,9 @@ const Destination = () => {
 							key={planet.name}
 							onClick={() => handleActivePlanet(index)}
 							className={`h-full ${
-								activePlanet === index ? 'border-b-2 border-b-white' : 'border-none'
+								activePlanet === index
+									? 'border-b-2 border-b-white'
+									: 'text-space-secondary hover:border-b-[1px] hover:border-b-white/70'
 							}`}
 						>
 							{planet.name}

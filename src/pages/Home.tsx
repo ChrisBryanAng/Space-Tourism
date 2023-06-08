@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Home = () => {
 	return (
 		<main className='flex flex-col xl:flex-row items-center justify-center xl:justify-around h-screen w-screen font-Bellefair bg-HomeMobile md:bg-HomeTablet xl:bg-HomeDesktop bg-cover bg-no-repeat bg-center'>
@@ -12,12 +14,16 @@ const Home = () => {
 					because we&#39;ll give you a truly out of this world experience!
 				</p>
 			</section>
-			<button
-				type='button'
-				className='xl:self-end xl:mb-40 bg-space-white rounded-full h-36 w-36 md:h-60 md:w-60 xl:h-64 xl:w-64 text-lg md:text-[32px] uppercase'
-			>
-				Explore
-			</button>
+			<div className='relative isolate a flex xl:self-end xl:mb-40 overflow-visible group'>
+				<div className='absolute inset-0 -z-10 bg-white/20 rounded-full h-36 w-36 md:h-60 md:w-60 xl:h-64 xl:w-64 xl:group-hover:scale-150 transition-all duration-100' />
+				<Link
+					to='/destination'
+					type='button'
+					className='flex items-center justify-center bg-space-white rounded-full h-36 w-36 md:h-60 md:w-60 xl:h-64 xl:w-64 text-lg md:text-[32px] uppercase xl:group-hover:scale-100'
+				>
+					Explore
+				</Link>
+			</div>
 		</main>
 	);
 };
